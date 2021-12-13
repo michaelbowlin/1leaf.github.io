@@ -71,7 +71,7 @@ module.exports = config => {
         let metadata = await Image(src.includes('http') ? src : `./src/${src}`, {
             widths: [600, 1500, 3000],
             formats: ['webp', 'jpeg'],
-            outputDir: './_site/img/recipes',
+            outputDir: './docs/img/recipes',
             urlPath: '/img/recipes/'
         });
     
@@ -92,7 +92,7 @@ module.exports = config => {
     return {
         dir: {
             input: 'src',
-            output: '_site',
+            output: 'docs',
             includes: '_includes',
             data: '_data'
         },
